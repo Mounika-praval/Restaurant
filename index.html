@@ -11,19 +11,36 @@
 </head>
 <body>
     <div class="container-fluid bg-color gy-3">
+        <!-- Navbar -->
         <div class="navbar w-auto py-2 rounded-top gx-1 border-bottom-secondary shadow-lg">
             <p class="col-4 Spoon-color mt-3 fw-bold heading"><i class="fa fa-cutlery Spoon-color px-1 px-md-2"></i>Restaurant</p>
             <div class="col-8 col-md-6 offset-md-2 d-flex flex-row justify-content-center g-2">
-                <a class="col-2 text-decoration-none text-light font">Home</a>
-                <a class="col-2 text-decoration-none text-light font">About</a>
-                <a class="col-2 text-decoration-none text-light font">Service</a>
-                <a class="col-2 text-decoration-none text-light font">Book</a>
-                <a class="col-2 text-decoration-none text-light font">Contact</a>
-                <span class="fa-stack fa fs-6 mt-0" data-count="28">
+                <a href="#home"class="col-2 text-decoration-none text-light font text-center p-2 active rounded">Home</a>
+                <a href="#home"class="col-2 text-decoration-none text-light font text-center p-2">About</a>
+                <a href="#home"class="col-2 text-decoration-none text-light font text-center p-2">Service</a>
+                <a href="#home"class="col-2 text-decoration-none text-light font text-center p-2">Book</a>
+                <a href="#home"class="col-2 text-decoration-none text-light font text-center p-2">Contact</a>
+                <a href="#sidePanel" class="fa-stack fa fs-6 mt-0 openbtn" onclick="openNav()" data-count="28">
                     <i class="fa fa-bell fa-stack-1x fa-inverse"></i>
-                  </span>
+                </a>
+                <div id="mySidepanel" class="sidepanel py-3">
+                <span class="fs-3 text-light px-1">Notifications</span><a href="javascript:void(0)" class="closebtn text-light text-decoration-none" onclick="closeNav()"> ×</a>
+                    <div class="mt-4 px-4">
+                        <h5 class="font-color">Notifications 1<i class="fa fa-bell fa-stack-1x fa text-light"></i></h5>
+                        <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <h5 class="font-color">Notifications 2<i class="fa fa-bell fa-stack-1x fa text-light"></i></h5>
+                        <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <h5 class="font-color">Notifications 3<i class="fa fa-bell fa-stack-1x fa text-light"></i></h5>
+                        <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <h5 class="font-color">Notifications 4<i class="fa fa-bell fa-stack-1x fa text-light"></i></h5>
+                        <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                        <h5 class="font-color">Notifications 5<i class="fa fa-bell fa-stack-1x fa text-light"></i></h5>
+                        <p class="text-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                    </div>
+                  </div>
             </div>
         </div>
+        <!-- Home -->
         <div class="row row-home py-5">
             <div class="col-12 col-md-6 d-flex flex-column justify-content-center h-auto p-4">
                 <h1 class="text-light fs-1">Enjoy our delicious meal.</h1>
@@ -33,6 +50,7 @@
             <div class="col-9 offset-2 col-md-5 offset-md-1 animated-circle border-danger">
             </div>
         </div>
+        <!-- About us -->
         <div class="row bg-light mt-5 shadow-lg">
             <div class="row h-auto col-md-6 my-5 gy-4">
                 <img src="./image1.jpg" alt="" class="col-6 mt-5" width="100" height="150">
@@ -47,6 +65,7 @@
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae voluptates unde nostrum amet ad, totam autem facilis sint! Cumque velit aperiam illo. Cum iure corporis laudantium consequatur nobis culpa illum?</p>
             </div>
         </div>
+        <!-- Master Chefs -->
         <div class="row bg-light shadow-lg">
             <h1 class="fs-1 text-center Spoon-color">Our Master Chefs</h1>
             <div class="row d-flex flex-row justify-content-center">
@@ -96,6 +115,7 @@
                 </div>
             </div>
         </div>
+        <!-- Book a Table -->
         <div class="row p-5 shadow-lg">
             <h1 class="fs-1 Spoon-color text-center mb-3">Book A Table Online</h1>
             <form class="col-12 col-md-6 offset-md-3 border rounded p-3">
@@ -114,6 +134,7 @@
                 <button type="submit" class="btn button-color text-light">Book a Meal</button>
               </form>
         </div>
+        <!-- footer -->
         <div class="row my-3">
             <div class="col-md-3 col-4 offset-md-2 font">
                 <h3 class="Spoon-color">Company</h3>
@@ -145,5 +166,14 @@ Wheeling, West Virginia<br>
             </div>
         </div>
     </div>
+    <script>
+        function openNav() {
+  document.getElementById("mySidepanel").style.width = "350px";
+}
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+    </script>
 </body>
 </html>
